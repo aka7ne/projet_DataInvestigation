@@ -5,7 +5,7 @@ author:
 - 'Allaali Narjis,'
 - 'Bouguima Kawthar,'
 - 'Taghnakt Myriam'
-date: "26 mars 2026"
+date: "27 mars 2026"
 output:
   pdf_document:
     fig_caption: yes
@@ -54,6 +54,8 @@ always_allow_html: true
 
 ## Dossier d’ouverture
 
+\bigskip
+
 Au cours des dernières années, la criminalité organisée est devenue un enjeu majeur à l’échelle internationale. Les différences observées entre les pays en termes de taux de criminalité soulèvent des interrogations quant aux facteurs pouvant expliquer ces variations. Parmi ces facteurs, les conditions socio-économiques telles que le niveau de revenu, le chômage ou encore les inégalités sociales semblent jouer un rôle déterminant.
 
 \medskip
@@ -84,61 +86,11 @@ Ce projet s’inscrit dans le cadre des enseignements de bases de données (TE43
 \medskip
 
 | Nom | Statut et id | Missions principales |
-|-------------------------|------------------|------------------------------------|
+|----------------------|------------------|--------------------------------|
 | ABBASSI Younes | Étudiant n°22401320 | Responsable de la table PAYS (création, harmonisation, contrôles SQL) et co-responsable des analyses descriptives R sur la répartition des pays. |
 | ALLAALI Narjis | Étudiante n°22313109 | Responsable de la table INDICATEURS année 2 et des comparaisons temporelles (SQL + préparation des données) et co-responsable des analyses R comparatives. |
 | BOUGUIMA Kawthar | Étudiante n°22303487 | Responsable de la table CRIMINALITÉ et de la table finale d’analyse (jointures SQL) et co-responsable des analyses R (corrélations et régressions). |
 | TAGHNAKT Myriam | Étudiante n° | Responsable de la table INDICATEURS année 1 (collecte, nettoyage, intégration SQL) et co-responsable des analyses statistiques R et corrélations. |
-
-....
-
-\bigskip
-
-\bigskip
-
-**Figure :** Pour inclure une figure, il faut qu'elle ait une légende (ce qui est le cas pour la Figure$~$\ref{myfigure} ci-après) et qu'elle soit référencée quelque part dans le document (ce qui est le cas dans les parenthèses qui précédent).
-
-![Une légende sous la figure.](logo-upvm_4.jpg){#myfigure width="4cm" height="2cm"}
-
-\bigskip
-
-**Tableau** : Notez que contrairement à une figure, la légende d'un tableau doit être mise **au-dessus** de celui-ci (*e.g.*, voir la Table$~$\ref{tab7.1} ci-dessous). Comme pour les figures, tout tableau doit également être discuté dans le texte du rapport.
-
-Utiliser <https://www.tablesgenerator.com/markdown_tables> pour créer des tables Markdown simples, ou bien utiliser \LaTeX. Plus de précisions sur l'utilisation des tableaux sont données en Annexe
-
-| Les tables |       sont       |   cool |
-|------------|:----------------:|-------:|
-| col 1 est  | alignée à gauche | \$1600 |
-| col 2 est  |     centrée      |   \$12 |
-| col 3 est  | alignée à droite |    \$1 |
-
-library(knitr)
-
-
-``` r
-install.packages("knitr")
-library(knitr)
-# Créer un tableau simple avec kable
-df <- data.frame(Nom = c("Alice", "Bob"), Age = c(25, 30))
-kable(df, format = "latex") # Peut aussi être "html", "latex"
-```
-
-Table: une légende au-dessus du tableau. \label{tab7.1}
-
-\begin{table}[h]
-    \centering
-    \begin{tabular}{|c|c|c|}
-        \hline
-        Nom & Âge & Ville \\
-        \hline
-        Alice & 25 & Paris \\
-        Bob & 30 & Lyon \\
-        Charlie & 22 & Marseille \\
-        \hline
-    \end{tabular}
-    \caption{Exemple de tableau en LaTeX}
-    \label{tab:exemple}
-\end{table}
 
 # Collecte des preuves — Les données
 
@@ -267,11 +219,11 @@ boxplot(cars, col = c("#5975a4", "#cc8963"))
 
 \begin{figure}
 
-{\centering \includegraphics[width=7cm]{scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-2-1} 
+{\centering \includegraphics[width=7cm]{scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-1-1} 
 
 }
 
-\caption{\label{fig:boxplots}Deux boxplots.}\label{fig:unnamed-chunk-2}
+\caption{\label{fig:boxplots}Deux boxplots.}\label{fig:unnamed-chunk-1}
 \end{figure}
 
 ``` r
@@ -292,11 +244,11 @@ boxplot(cars, main = "Un titre qui est vraiment beaucoup trop long et qui dépas
 
 \begin{figure}
 
-{\centering \includegraphics[width=7cm]{scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-3-1} 
+{\centering \includegraphics[width=7cm]{scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-2-1} 
 
 }
 
-\caption{Pas super.}\label{fig:unnamed-chunk-3}
+\caption{Pas super.}\label{fig:unnamed-chunk-2}
 \end{figure}
 
 par celui-ci:
@@ -311,11 +263,11 @@ boxplot(cars,
 
 \begin{figure}
 
-{\centering \includegraphics[width=7cm]{scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-4-1} 
+{\centering \includegraphics[width=7cm]{scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-3-1} 
 
 }
 
-\caption{Déjà mieux.}\label{fig:unnamed-chunk-4}
+\caption{Déjà mieux.}\label{fig:unnamed-chunk-3}
 \end{figure}
 
 \normalsize
