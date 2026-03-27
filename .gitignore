@@ -1,0 +1,30 @@
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Backup éditeur
+*~
+*.bak
+*.backup
+*.swp
+*.tmp
+
+# LaTeX fichiers temporaires
+*.aux
+*.log
+*.toc
+*.out
+*.fls
+*.fdb_latexmk
+
+# Fichiers générés (outputs)
+*.pdf
+*.html
+*.docx
+
+# Backup bib
+*.bib~
+
+# Windows
+Thumbs.db
