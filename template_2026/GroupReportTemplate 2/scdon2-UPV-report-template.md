@@ -1,11 +1,11 @@
 ---
-title: " Rapport de groupe des UE \\newline  Bases de données + Sciences des Données 2"
+title: "Rapport de groupe des UE \\newline Bases de données + Sciences des Données 2"
 author:
 - 'Abbassi Younes,'
 - 'Allaali Narjis,'
 - 'Bouguima Kawthar,'
 - 'Taghnakt Myriam'
-date: "27 mars 2026"
+date: "28 mars 2026"
 output:
   pdf_document:
     fig_caption: yes
@@ -58,9 +58,9 @@ always_allow_html: true
 
 Au cours des dernières années, la criminalité organisée est devenue un enjeu majeur à l’échelle internationale. Les différences observées entre les pays en termes de taux de criminalité soulèvent des interrogations quant aux facteurs pouvant expliquer ces variations. Parmi ces facteurs, les conditions socio-économiques telles que le niveau de revenu, le chômage ou encore les inégalités sociales semblent jouer un rôle déterminant.
 
-\medskip
+\bigskip
 
-Dans le cadre de ce projet, Narjis, Kawthar, Myriam ainsi que Younes ont été missionnés par INTERPOL (a modifier si plagiat) afin de mener une enquête sur les causes de la criminalité à l’échelle mondiale. Cette mise en situation permet d’aborder l’analyse de manière concrète, en mobilisant des données réelles pour répondre à une problématique actuelle.
+Dans le cadre de ce projet, Narjis, Kawthar, Myriam ainsi que Younes ont été missionnés par INTERPOL (a modifier en cas de non droit) afin de mener une enquête sur les causes de la criminalité à l’échelle mondiale. Cette mise en situation permet d’aborder l’analyse de manière concrète, en mobilisant des données réelles pour répondre à une problématique actuelle.
 
 \bigskip
 
@@ -75,7 +75,7 @@ Dans le cadre de ce projet, Narjis, Kawthar, Myriam ainsi que Younes ont été m
 
 Cette question est particulièrement importante pour les décideurs publics et les organisations internationales, car une meilleure compréhension de ces relations pourrait permettre de mettre en place des politiques de prévention plus efficaces et adaptées aux réalités de chaque pays.
 
-\medskip
+\bigskip
 
 Ce projet s’inscrit dans le cadre des enseignements de bases de données (TE43MI) et de sciences des données (TE44MI). Il repose sur l’analyse de différentes bases de données afin d’identifier les facteurs explicatifs de la criminalité et d’évaluer leur impact.
 
@@ -86,7 +86,7 @@ Ce projet s’inscrit dans le cadre des enseignements de bases de données (TE43
 \medskip
 
 | Nom | Statut et id | Missions principales |
-|----------------------|------------------|--------------------------------|
+|----|----|----|
 | ABBASSI Younes | Étudiant n°22401320 | Responsable de la table PAYS (création, harmonisation, contrôles SQL) et co-responsable des analyses descriptives R sur la répartition des pays. |
 | ALLAALI Narjis | Étudiante n°22313109 | Responsable de la table INDICATEURS année 2 et des comparaisons temporelles (SQL + préparation des données) et co-responsable des analyses R comparatives. |
 | BOUGUIMA Kawthar | Étudiante n°22303487 | Responsable de la table CRIMINALITÉ et de la table finale d’analyse (jointures SQL) et co-responsable des analyses R (corrélations et régressions). |
@@ -96,26 +96,75 @@ Ce projet s’inscrit dans le cadre des enseignements de bases de données (TE43
 
 ## Provenance des données
 
-Donner ici le ou les \textbf{lien}(s) vers le(s) jeu(x) de données que vous avez utiliser pour votre travail et présenter les rapidement.
+Nous avons utilisé plusieurs sources de données internationales afin d’analyser l’influence des facteurs socio-économiques sur la criminalité.
+
+Les principales sources utilisées sont :
+
+-   Données de criminalité organisée :\
+    <https://ocindex.net/downloads>
+
+-   Données socio-économiques (PIB, chômage, urbanisation) :\
+    <https://perspective.usherbrooke.ca>
+
+-   Données d’Indice de Développement Humain (IDH) :\
+    <https://hdr.undp.org/data-center>
+
+Ces données sont disponibles sous forme de fichiers `CSV/XLSX` ainsi que code `.R`
 
 \bigskip
 
-Dans le jeu de données récupéré, expliquer pourquoi vous avez sélectionné certaines tables ou pourquoi vous en avez rajouté. Vous devez indiquer comment les données sont stockées (le format csv, txt...), la taille des fichiers, le nombre de lignes et de colonnes, \ldots{}
+À partir des jeux de données initiaux, nous avons construit trois tables principales :
+
+-   une table `PAYS`
+
+-   une table `INDICATEURS`
+
+-   une table `CRIMINALITE`
+
+Les données étant réparties dans plusieurs fichiers, nous avons regroupé les indicateurs socio-économiques (PIB, chômage, IDH, urbanisation) dans une seule table.
 
 \bigskip
 
-Expliquer quels choix vous avez réalisés pour filtrer les lignes et les colonnes (éventuellement réduire le périmètre du projet) et décrire les critères de sélection (e.g., ne garder que 5 colonnes sur les 15, ne garder que les lignes qui correspondent à une ville en particulier, \ldots).
+Afin de réduire le périmètre du projet, nous avons effectué les filtrages suivants :
+
+\
+Au niveau des colonnes nous avons conservé uniquement les variables pertinentes :
+
+-   PIB par habitant
+
+-   taux de chômage
+
+-   taux d’urbanisation
+
+-   IDH
+
+-   indice de criminalité
+
+Les autres variables ont été supprimées car non pertinentes pour l’analyse.
+
+\
+Pour ce qui est des lignes nous avons conservé
+
+-   les pays avec des données disponibles pour **2017 et 2023** (155 pays)
+
+-   les observations avec aucune valeurs manquantes
 
 \bigskip
 
-Finalement, définir clairement quelle est la \textbf{population étudiée}. Vous devez expliquer quelles données vous avez utiliser et en quoi elles peuvent permettre d'apporter des éléments de réponses aux questions posées. Bien définir quelles sont les \textbf{unités statistiques}.
+La population étudiée correspond à un ensemble de pays pour lesquels les données sont disponibles sur les deux années étudiées.
+
+L’unité statistique est le couple (`pays, année`)
+
+Chaque ligne correspond donc à un pays pour une année donnée.
+
+Ces données permettent d’analyser les liens entre **indicateurs socio-économiques et criminalité**, et ainsi d’apporter des éléments de réponse aux problématiques posées.
 
 ## Descriptif des tables
 
 Table 2.1 : Pays (156 x 3)
 
 | nom_colonne | Type | Signification | Caractéristiques |
-|------------------|------------------|-------------------|------------------|
+|----|----|----|----|
 | id_pays | CHAR(3) | Code ISO | Clé étrangère |
 | annee | INT | Année d'enregistrement des données | Non unique |
 | indice_criminalite | FLOAT | Indice de criminalité | Allant de 1 à 10 |
@@ -131,7 +180,7 @@ Table 2.2 : Criminalité (311 x 3)
 Table 2.3 : Indicateurs (311 x 6)
 
 | nom_colonne  | type    | Signification                       | Caractèristique   |
-|------------------|------------------|-------------------|------------------|
+|--------------|---------|-------------------------------------|-------------------|
 | id_pays      | CHAR(3) | Code ISO                            | Clé etrangère     |
 | année        | INT     | Année d'observation                 | Non unique        |
 | PIB          | FLOAT   | Produit interieur brut par habitant | Valeurs positives |
@@ -139,15 +188,27 @@ Table 2.3 : Indicateurs (311 x 6)
 | IDH          | FLOAT   | Indice de développement humain      | Entre 0 et 1      |
 | urbanisation | FLOAT   | \% population urbaine               | Entre 0 et 100    |
 
+\bigskip
+
+Les variables sélectionnées permettent d’analyser l’influence de plusieurs facteurs socio-économiques sur le niveau de criminalité.
+
+Les indicateurs économiques (PIB, chômage), sociaux (IDH) et structurels (urbanisation) sont utilisés comme variables explicatives, tandis que l’indice de criminalité constitue la variable à expliquer.
+
+Cette structuration des données permet d’effectuer des analyses statistiques, afin de répondre à la question de recherche.
+
 # Reconstitution du système — La base de données
 
--   Le MCD décrit \*\*\*\*\* relation désequilibrée
+-   Le modèle conceptuel de données a été construit afin de représenter les relations entre les pays, les indicateurs socio-économiques et le niveau de criminalité.
 
-    ![MCD avec Entité Pays, Criminalité et Indicateurs](res/images/uml.png){#uml width="500"}
+    L’entité centrale du modèle est **le pays**, pour lequel plusieurs observations peuvent être enregistrées en fonction des années étudiées (2017 et 2023). 
 
--   Le MOD
+    ![MCD réalisée à l'aide de l'outil [`MOCODO`](https://mocodo.net/)](res/images/mcd.png){#mcd width="400"}
 
-    mettre ici le diagramme phpmyAdmin
+-   Le modèle relationnel de données est obtenu à partir du MCD en traduisant les entités en tables relationnelles.
+
+    Les relations sont implémentées à l’aide des clés étrangères `id_pays` ainsi qu'`annee` , permettant de relier les tables entre elles.
+
+    ![MOD réalisée à l'aide du designer de PhpMyAdmin](res/images/mod.png){#mod width="400"}
 
 \bigskip
 

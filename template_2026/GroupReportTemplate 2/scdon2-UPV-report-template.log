@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.26)  27 MAR 2026 11:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.28)  28 MAR 2026 19:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -506,14 +506,14 @@ Package pdftex.def Info: logo-upvm_4.jpg  used on input line 85.
 [1
 
 {c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./logo-upvm_4.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 104--112
+Underfull \hbox (badness 10000) in paragraph at lines 104--114
 
  []
 
 [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 125--128
+Underfull \hbox (badness 10000) in paragraph at lines 127--130
 
  []
 
@@ -523,7 +523,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--128
 <good-abstract.png, id=115, 1033.8625pt x 921.4425pt>
 File: good-abstract.png Graphic file (type png)
 <use good-abstract.png>
-Package pdftex.def Info: good-abstract.png  used on input line 138.
+Package pdftex.def Info: good-abstract.png  used on input line 140.
 (pdftex.def)             Requested size: 284.52603pt x 284.51942pt.
 [3
 
@@ -551,44 +551,64 @@ Chapitre 1.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.210 \newpage
+l.212 \newpage
                [1
 
 ] [2]
 Chapitre 2.
 [3
 
-] [4]
-Chapitre 3.
-<res/images/uml.png, id=176, 551.56062pt x 295.60437pt>
-File: res/images/uml.png Graphic file (type png)
-<use res/images/uml.png>
-Package pdftex.def Info: res/images/uml.png  used on input line 360.
-(pdftex.def)             Requested size: 376.41966pt x 201.73901pt.
-
-Overfull \hbox (41.42442pt too wide) in paragraph at lines 401--405
-\T1/cmr/m/n/12 ter puis ré-cu-pé-rer et af-fi-cher le ré-sul-tat di-rec-te-ment de-puis le .Rmd. Un fi-chier connexionBDD.Rmd
+]
+Overfull \hbox (1.99695pt too wide) in paragraph at lines 406--406
+[]|\T1/cmr/m/n/12 CHAR(3)|  
  []
 
+[4]
+Chapitre 3.
+<res/images/mcd.png, id=180, 551.56062pt x 295.60437pt>
+File: res/images/mcd.png Graphic file (type png)
+<use res/images/mcd.png>
+Package pdftex.def Info: res/images/mcd.png  used on input line 441.
+(pdftex.def)             Requested size: 301.13742pt x 161.3921pt.
+
+Overfull \hbox (11.42659pt too wide) in paragraph at lines 449--452
+[]\T1/cmr/m/n/12 Les re-la-tions sont im-plé-men-tées à l'aide des clés étran-gères \T1/cmtt/m/n/12 id_pays \T1/cmr/m/n/12 ainsi qu'\T1/cmtt/m/n/12 annee
+ []
+
+<res/images/mod.png, id=182, 426.59375pt x 271.51437pt>
+File: res/images/mod.png Graphic file (type png)
+<use res/images/mod.png>
+Package pdftex.def Info: res/images/mod.png  used on input line 455.
+(pdftex.def)             Requested size: 301.14569pt x 191.67036pt.
 [5
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.406 \chapter
-              {MatÃ©riel et MÃ©thodes}\label{matuxe9riel-et-muxe9thodes} <./res/images/uml.png>] [6]
+l.462 \section
+              {Import des donnÃ©es}\label{import-des-donnuxe9es}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.462 \section
+              {Import des donnÃ©es}\label{import-des-donnuxe9es} <./res/images/mcd.png> <./res/images/mod.png>]
+Overfull \hbox (41.42442pt too wide) in paragraph at lines 492--496
+\T1/cmr/m/n/12 ter puis ré-cu-pé-rer et af-fi-cher le ré-sul-tat di-rec-te-ment de-puis le .Rmd. Un fi-chier connexionBDD.Rmd
+ []
+
+[6]
 Chapitre 4.
 [7
 
 ]
 Chapitre 5.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 478.
-<scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-1-1.pdf, id=201, 469.755pt x 325.215pt>
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 569.
+<scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-1-1.pdf, id=208, 469.755pt x 325.215pt>
 File: scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (type pdf)
 <use scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-1-1.pdf>
-Package pdftex.def Info: scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-1-1.pdf  used on input line 484.
+Package pdftex.def Info: scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-1-1.pdf  used on input line 575.
 (pdftex.def)             Requested size: 199.16928pt x 137.88454pt.
 [8
 
@@ -596,30 +616,30 @@ Package pdftex.def Info: scdon2-UPV-report-template_files/figure-latex/unnamed-c
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.505 \begin{Shaded}
+l.596 \begin{Shaded}
                      <./scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-1-1.pdf>]
-<scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-2-1.pdf, id=213, 469.755pt x 325.215pt>
+<scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-2-1.pdf, id=220, 469.755pt x 325.215pt>
 File: scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-2-1.pdf Graphic file (type pdf)
 <use scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-2-1.pdf>
-Package pdftex.def Info: scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-2-1.pdf  used on input line 513.
+Package pdftex.def Info: scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-2-1.pdf  used on input line 604.
 (pdftex.def)             Requested size: 199.16928pt x 137.88454pt.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <6> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 526.
-<scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-3-1.pdf, id=214, 469.755pt x 325.215pt>
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 617.
+<scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-3-1.pdf, id=221, 469.755pt x 325.215pt>
 File: scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type pdf)
 <use scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-3-1.pdf>
-Package pdftex.def Info: scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-3-1.pdf  used on input line 533.
+Package pdftex.def Info: scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-3-1.pdf  used on input line 624.
 (pdftex.def)             Requested size: 199.16928pt x 137.88454pt.
 [9
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.565 \chapter
+l.656 \chapter
               {Mise Ã  l'Ã©preuve ---
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.565 \chapter
+l.656 \chapter
               {Mise Ã  l'Ã©preuve --- <./scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-2-1.pdf> <./scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-3-1.pdf>]
 Chapitre 6.
 [10
@@ -642,7 +662,7 @@ No file scdon2-UPV-report-template.bbl.
 pdfTeX warning (ext4): destination with the same identifier (name{table.8.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.717   \item L
+l.808   \item L
                es nombres sont bien alignÃ©s Ã  droite dans la 3\ieme{} colonne] [15] (./scdon2-UPV-report-template.aux)
  ***********
 LaTeX2e <2025-11-01>
@@ -655,18 +675,18 @@ Package rerunfilecheck Info: File `scdon2-UPV-report-template.out' has not chang
 (rerunfilecheck)             Checksum: 8600B02C8D2FAB47101B8EDF71EDD2F1;4139.
  ) 
 Here is how much of TeX's memory you used:
- 13537 strings out of 469495
- 216956 string characters out of 5467255
- 642019 words of memory out of 5000000
- 41932 multiletter control sequences out of 15000+600000
+ 13546 strings out of 469495
+ 217145 string characters out of 5467255
+ 642115 words of memory out of 5000000
+ 41940 multiletter control sequences out of 15000+600000
  643582 words of font info for 78 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  80i,8n,82p,563b,546s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0800.450pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1728.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk><c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on scdon2-UPV-report-template.pdf (20 pages, 1856909 bytes).
+ <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0800.450pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1728.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk><c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on scdon2-UPV-report-template.pdf (20 pages, 1917753 bytes).
 PDF statistics:
- 782 PDF objects out of 1000 (max. 8388607)
- 313 compressed objects within 4 object streams
- 61 named destinations out of 1000 (max. 500000)
- 215 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 804 PDF objects out of 1000 (max. 8388607)
+ 318 compressed objects within 4 object streams
+ 62 named destinations out of 1000 (max. 500000)
+ 220 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -50,8 +50,8 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{Projet réalisé par\\[0.5cm] l'équipe InvestigationData du groupe de TD2 \\[3cm]Rapport
-de groupe des UE \newline  Bases de données + Sciences des Données 2}
+\title{Projet réalisé par\\[0.5cm] l'équipe InvestigationData du groupe de TD2 \\[3cm]\newline
+Rapport de groupe des UE \newline Bases de données + Sciences des Données 2}
 
 \authornameonly{Abbassi Younes, Allaali Narjis, Bouguima
 Kawthar, Taghnakt Myriam }
@@ -107,8 +107,10 @@ Kawthar, Taghnakt Myriam }
 %%Signature: \rule{7cm}{0.25pt} \hfill Date: \rule{4cm}{0.25pt} \\[1cm]
 %%Signature: \rule{7cm}{0.25pt} \hfill Date: \rule{4cm}{0.25pt} \\[1cm]
 %%\vskip 1pc
-Signature : Marine Demangeot \hfill Date: 04/05/2025\\[1cm]
-Signature : Marine Demangeot \hfill Date: 04/05/2025 \\[1cm]
+Signature : Abbassi Younes \hfill Date: 24/03/2026\\[1cm]
+Signature : Allaali Narjis \hfill Date: 24/03/2026 \\[1cm]
+Signature : Bouguima Kawthar \hfill Date: 24/03/2026\\[1cm]
+Signature : Taghnakt Myriam \hfill Date: 24/03/2026 \\[1cm]
 
 %\textcolor{red}{Mettre à jour la date.}
 
@@ -174,13 +176,13 @@ les conditions socio-économiques telles que le niveau de revenu, le
 chômage ou encore les inégalités sociales semblent jouer un rôle
 déterminant.
 
-\medskip
+\bigskip
 
 Dans le cadre de ce projet, Narjis, Kawthar, Myriam ainsi que Younes ont
-été missionnés par INTERPOL (a modifier si plagiat) afin de mener une
-enquête sur les causes de la criminalité à l'échelle mondiale. Cette
-mise en situation permet d'aborder l'analyse de manière concrète, en
-mobilisant des données réelles pour répondre à une problématique
+été missionnés par INTERPOL (a modifier en cas de non droit) afin de
+mener une enquête sur les causes de la criminalité à l'échelle mondiale.
+Cette mise en situation permet d'aborder l'analyse de manière concrète,
+en mobilisant des données réelles pour répondre à une problématique
 actuelle.
 
 \bigskip
@@ -200,7 +202,7 @@ compréhension de ces relations pourrait permettre de mettre en place des
 politiques de prévention plus efficaces et adaptées aux réalités de
 chaque pays.
 
-\medskip
+\bigskip
 
 Ce projet s'inscrit dans le cadre des enseignements de bases de données
 (TE43MI) et de sciences des données (TE44MI). Il repose sur l'analyse de
@@ -215,9 +217,9 @@ recherche}\label{responsabilituxe9s-et-composition-de-luxe9quipe-de-recherche}
 \medskip
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3056}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4444}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Nom
@@ -249,42 +251,103 @@ données}\label{collecte-des-preuves-les-donnuxe9es}
 
 \section{Provenance des données}\label{provenance-des-donnuxe9es}
 
-Donner ici le ou les \textbf{lien}(s) vers le(s) jeu(x) de données que
-vous avez utiliser pour votre travail et présenter les rapidement.
+Nous avons utilisé plusieurs sources de données internationales afin
+d'analyser l'influence des facteurs socio-économiques sur la
+criminalité.
+
+Les principales sources utilisées sont :
+
+\begin{itemize}
+\item
+  Données de criminalité organisée :\\
+  \url{https://ocindex.net/downloads}
+\item
+  Données socio-économiques (PIB, chômage, urbanisation) :\\
+  \url{https://perspective.usherbrooke.ca}
+\item
+  Données d'Indice de Développement Humain (IDH) :\\
+  \url{https://hdr.undp.org/data-center}
+\end{itemize}
+
+Ces données sont disponibles sous forme de fichiers \texttt{CSV/XLSX}
+ainsi que code \texttt{.R}
 
 \bigskip
 
-Dans le jeu de données récupéré, expliquer pourquoi vous avez
-sélectionné certaines tables ou pourquoi vous en avez rajouté. Vous
-devez indiquer comment les données sont stockées (le format csv,
-txt\ldots), la taille des fichiers, le nombre de lignes et de colonnes,
-\ldots{}
+À partir des jeux de données initiaux, nous avons construit trois tables
+principales :
+
+\begin{itemize}
+\item
+  une table \texttt{PAYS}
+\item
+  une table \texttt{INDICATEURS}
+\item
+  une table \texttt{CRIMINALITE}
+\end{itemize}
+
+Les données étant réparties dans plusieurs fichiers, nous avons regroupé
+les indicateurs socio-économiques (PIB, chômage, IDH, urbanisation) dans
+une seule table.
 
 \bigskip
 
-Expliquer quels choix vous avez réalisés pour filtrer les lignes et les
-colonnes (éventuellement réduire le périmètre du projet) et décrire les
-critères de sélection (e.g., ne garder que 5 colonnes sur les 15, ne
-garder que les lignes qui correspondent à une ville en particulier,
-\ldots).
+Afin de réduire le périmètre du projet, nous avons effectué les
+filtrages suivants :
+
+\hfill\break
+Au niveau des colonnes nous avons conservé uniquement les variables
+pertinentes :
+
+\begin{itemize}
+\item
+  PIB par habitant
+\item
+  taux de chômage
+\item
+  taux d'urbanisation
+\item
+  IDH
+\item
+  indice de criminalité
+\end{itemize}
+
+Les autres variables ont été supprimées car non pertinentes pour
+l'analyse.
+
+\hfill\break
+Pour ce qui est des lignes nous avons conservé
+
+\begin{itemize}
+\item
+  les pays avec des données disponibles pour \textbf{2017 et 2023} (155
+  pays)
+\item
+  les observations avec aucune valeurs manquantes
+\end{itemize}
 
 \bigskip
 
-Finalement, définir clairement quelle est la
-\textbf{population étudiée}. Vous devez expliquer quelles données vous
-avez utiliser et en quoi elles peuvent permettre d'apporter des éléments
-de réponses aux questions posées. Bien définir quelles sont les
-\textbf{unités statistiques}.
+La population étudiée correspond à un ensemble de pays pour lesquels les
+données sont disponibles sur les deux années étudiées.
+
+L'unité statistique est le couple (\texttt{pays,\ année})
+
+Chaque ligne correspond donc à un pays pour une année donnée.
+
+Ces données permettent d'analyser les liens entre \textbf{indicateurs
+socio-économiques et criminalité}, et ainsi d'apporter des éléments de
+réponse aux problématiques posées.
 
 \section{Descriptif des tables}\label{descriptif-des-tables}
 
 Table 2.1 : Pays (156 x 3)
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2466}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2466}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2603}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2466}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 nom\_colonne
@@ -322,10 +385,10 @@ region & VARCHAR & Région géographique & 19 régions \\
 Table 2.3 : Indicateurs (311 x 6)
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2466}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2466}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2603}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2466}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1772}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1139}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.4684}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2405}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 nom\_colonne
@@ -348,22 +411,50 @@ IDH & FLOAT & Indice de développement humain & Entre 0 et 1 \\
 urbanisation & FLOAT & \% population urbaine & Entre 0 et 100 \\
 \end{longtable}
 
+\bigskip
+
+Les variables sélectionnées permettent d'analyser l'influence de
+plusieurs facteurs socio-économiques sur le niveau de criminalité.
+
+Les indicateurs économiques (PIB, chômage), sociaux (IDH) et structurels
+(urbanisation) sont utilisés comme variables explicatives, tandis que
+l'indice de criminalité constitue la variable à expliquer.
+
+Cette structuration des données permet d'effectuer des analyses
+statistiques, afin de répondre à la question de recherche.
+
 \chapter{Reconstitution du système --- La base de
 données}\label{reconstitution-du-systuxe8me-la-base-de-donnuxe9es}
 
 \begin{itemize}
 \item
-  Le MCD décrit ***** relation désequilibrée
+  Le modèle conceptuel de données a été construit afin de représenter
+  les relations entre les pays, les indicateurs socio-économiques et le
+  niveau de criminalité.
+
+  L'entité centrale du modèle est \textbf{le pays}, pour lequel
+  plusieurs observations peuvent être enregistrées en fonction des
+  années étudiées (2017 et 2023).~
 
   \begin{figure}
   \centering
-  \includegraphics[width=5.20833in,height=\textheight,keepaspectratio]{res/images/uml.png}
-  \caption{MCD avec Entité Pays, Criminalité et Indicateurs}\label{uml}
+  \includegraphics[width=4.16667in,height=\textheight,keepaspectratio]{res/images/mcd.png}
+  \caption{MCD réalisée à l'aide de l'outil
+  \href{https://mocodo.net/}{\texttt{MOCODO}}}\label{mcd}
   \end{figure}
 \item
-  Le MOD
+  Le modèle relationnel de données est obtenu à partir du MCD en
+  traduisant les entités en tables relationnelles.
 
-  mettre ici le diagramme phpmyAdmin
+  Les relations sont implémentées à l'aide des clés étrangères
+  \texttt{id\_pays} ainsi qu'\texttt{annee} , permettant de relier les
+  tables entre elles.
+
+  \begin{figure}
+  \centering
+  \includegraphics[width=4.16667in,height=\textheight,keepaspectratio]{res/images/mod.png}
+  \caption{MOD réalisée à l'aide du designer de PhpMyAdmin}\label{mod}
+  \end{figure}
 \end{itemize}
 
 \bigskip
