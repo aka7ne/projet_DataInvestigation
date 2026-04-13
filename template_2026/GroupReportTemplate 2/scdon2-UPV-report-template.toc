@@ -7,18 +7,19 @@
 \contentsline {section}{\numberline {2.2}Descriptif des tables}{4}{section.2.2}%
 \contentsline {chapter}{\numberline {Chapitre 3}Reconstitution du système --- La base de données}{5}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Import des données}{6}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Requêtes réalisées}{6}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Quelques détails techniques}{6}{section.3.3}%
-\contentsline {chapter}{\numberline {Chapitre 4}Matériel et Méthodes}{7}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Logiciels}{7}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Modélisation statistique}{7}{section.4.2}%
-\contentsline {chapter}{\numberline {Chapitre 5}Premiers indices --- Analyse exploratoire}{8}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Utiliser R}{8}{section.5.1}%
-\contentsline {chapter}{\numberline {Chapitre 6}Mise à l'épreuve --- Modélisation}{10}{chapter.6}%
-\contentsline {section}{\numberline {6.1}La droite de régression linéaire : un premier exemple}{10}{section.6.1}%
-\contentsline {chapter}{\numberline {Chapitre 7}Interprétation --- Résolution de l'enquête}{11}{chapter.7}%
-\contentsline {chapter}{\numberline {Chapitre 8}Conclusion --- Verdict}{12}{chapter.8}%
-\contentsline {chapter}{Bibliographie}{13}{chapter*.5}%
-\contentsline {chapter}{Annexes}{14}{chapter*.7}%
-\contentsline {section}{\textbf {Codes}}{14}{section*.8}%
-\contentsline {section}{\textbf {Tables}}{14}{section*.9}%
+\contentsline {section}{\numberline {3.2}Requêtes réalisées}{7}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Quelques détails techniques}{11}{section.3.3}%
+\contentsline {chapter}{\numberline {Chapitre 4}Matériel et Méthodes}{12}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Logiciels}{12}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Modélisation statistique}{12}{section.4.2}%
+\contentsline {chapter}{\numberline {Chapitre 5}Premiers indices --- Analyse exploratoire}{13}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Utiliser R}{13}{section.5.1}%
+\contentsline {chapter}{\numberline {Chapitre 6}Mise à l'épreuve --- Modélisation}{15}{chapter.6}%
+\contentsline {section}{\numberline {6.1}La droite de régression linéaire : un premier exemple}{15}{section.6.1}%
+\contentsline {chapter}{\numberline {Chapitre 7}Interprétation --- Résolution de l'enquête}{16}{chapter.7}%
+\contentsline {chapter}{\numberline {Chapitre 8}Conclusion --- Verdict}{17}{chapter.8}%
+\contentsline {chapter}{Bibliographie}{18}{chapter*.5}%
+\contentsline {chapter}{Annexes}{19}{chapter*.7}%
+\contentsline {section}{\textbf {Codes}}{19}{section*.8}%
+\contentsline {subsubsection}{\textbf {Annexe 3.1} : Code Python de traitement des données}{19}{section*.9}%
+\contentsline {section}{\textbf {Tables}}{20}{section*.10}%

@@ -434,7 +434,7 @@
         \vfill
         \begin{center}  % Department changed to School July 1995
                 {\rmfamily\normalsize Département MIASHS, UFR 6 \expandafter{\@dept},\\
-                Uiversité Paul Valéry, Montpellier 3.}
+                Uiversité Paul Valéry, Montpellier.}
                 \vskip1cm
                 {\rmfamily\normalsize \@submitdate}\\
         \end{center}
@@ -451,12 +451,12 @@
                 {\rmfamily\normalsize \@author}\\
         \end{center}
 \begin{figure} \begin{center}
-\includegraphics[width=5cm]{logo-upvm_4.jpg}
+\includegraphics[width=5cm]{xxx.png}
 \end{center} \end{figure}
         \vskip1cm
         \begin{center}  % Department changed to School July 1995
                 {\rmfamily\normalsize Département MIASHS, UFR 6  \expandafter{\@dept}\\
-                Université Paul Valéry, Montpellier 3} \\
+                Université de Montpellier Paul Valéry} \\
                 \vskip1cm
                 {\rmfamily\normalsize \@submitdate}\\
         \end{center}
@@ -478,12 +478,12 @@
                 {\rmfamily\normalsize \@author}\\
         \end{center}
 \begin{figure} \begin{center}
-\includegraphics[width=5cm]{logo-upvm_4.jpg}
+\includegraphics[width=5cm]{logo-upvm_4.png}
 \end{center} \end{figure}
         \vskip1cm
         \begin{center}  % Department changed to School July 1995
                 {\rmfamily\normalsize Département MIASHS, UFR 6 \expandafter{\@dept}\\
-                Université Paul Valéry, Montpellier 3} \\
+                Université de Montpellier Paul Valéry} \\
                 \vskip1cm
                 {\rmfamily\normalsize \@submitdate}\\
         \end{center}
@@ -503,12 +503,12 @@
                 {\rmfamily\normalsize \@author}\\
         \end{center}
 \begin{figure} \begin{center}
-\includegraphics[width=5cm]{logo-upvm_4.jpg}
+\includegraphics[width=5cm]{logo-upvm_4.png}
 \end{center} \end{figure}
         \vskip1cm
         \begin{center}  % Department changed to School July 1995
                 {\rmfamily\normalsize Département MIASHS, UFR 6 \expandafter{\@dept}\\
-                Université Paul Valéry, Montpellier 3} \\
+                Université de Montpellier Paul Valéry} \\
                 \vskip1cm
                 {\rmfamily\normalsize \@submitdate}\\
         \end{center}
@@ -534,7 +534,7 @@
         \vskip1cm
         \begin{center}  % Department changed to School July 1995
                 {\rmfamily\normalsize Département MIASHS, UFR 6 \expandafter{\@dept}\\
-                Uiversité Paul Valéry, Montpellier 3} \\
+                Université de Montpellier Paul Valéry} \\
                 \vskip1cm
                 {\rmfamily\normalsize \@submitdate}\\
         \end{center}
@@ -560,7 +560,7 @@
         \vskip1cm
         \begin{center}  % Department changed to School July 1995
                 {\rmfamily\normalsize Département MIASHS, UFR 6 \expandafter{\@dept}\\
-                Université Paul Valéry, Montpellier 3} \\
+                Université de Montpellier Paul Valéry} \\
                 \vskip1cm
                 {\rmfamily\normalsize \@submitdate}\\
         \end{center}
@@ -586,7 +586,7 @@
         \vskip1cm
         \begin{center}  % Department changed to School July 1995
                 {\rmfamily\normalsize Département MIASHS, UFR 6 \expandafter{\@dept}\\
-                Université Paul Valéry, Montpellier 3} \\
+                Université de Montpellier Paul Valéry} \\
                 \vskip1cm
                 {\rmfamily\normalsize \@submitdate}\\
         \end{center}

@@ -5,7 +5,7 @@ author:
 - 'Allaali Narjis,'
 - 'Bouguima Kawthar,'
 - 'Taghnakt Myriam'
-date: "28 mars 2026"
+date: "09 avril 2026"
 output:
   pdf_document:
     fig_caption: yes
@@ -66,7 +66,7 @@ Dans le cadre de ce projet, Narjis, Kawthar, Myriam ainsi que Younes ont été m
 
 \begin{center}
 
-\textbf{Dans quelle mesure les facteurs socio-économiques influencent-ils le taux de criminalité organisée entre pays a l'échelle l'internationale ?}
+\textbf{Dans quelle mesure les facteurs socio-économiques influencent-ils le taux de criminalité organisée entre pays a l'échelle l'internationale (2017/2023)?}
 
 \end{center}
 \medskip
@@ -90,7 +90,7 @@ Ce projet s’inscrit dans le cadre des enseignements de bases de données (TE43
 | ABBASSI Younes | Étudiant n°22401320 | Responsable de la table PAYS (création, harmonisation, contrôles SQL) et co-responsable des analyses descriptives R sur la répartition des pays. |
 | ALLAALI Narjis | Étudiante n°22313109 | Responsable de la table INDICATEURS année 2 et des comparaisons temporelles (SQL + préparation des données) et co-responsable des analyses R comparatives. |
 | BOUGUIMA Kawthar | Étudiante n°22303487 | Responsable de la table CRIMINALITÉ et de la table finale d’analyse (jointures SQL) et co-responsable des analyses R (corrélations et régressions). |
-| TAGHNAKT Myriam | Étudiante n° | Responsable de la table INDICATEURS année 1 (collecte, nettoyage, intégration SQL) et co-responsable des analyses statistiques R et corrélations. |
+| TAGHNAKT Myriam | Étudiante n°22403737 | Responsable de la table INDICATEURS année 1 (collecte, nettoyage, intégration SQL) et co-responsable des analyses statistiques R et corrélations. |
 
 # Collecte des preuves — Les données
 
@@ -214,26 +214,373 @@ Cette structuration des données permet d’effectuer des analyses statistiques,
 
 ## Import des données
 
--   Préciser les nettoyages réalisés avant l'import comme l'uniformisation des valeurs des champs (*e.g.*, Mr, M., Monsieur, ...) ou le remplissage des valeurs manquantes par une valeur moyenne ...
+Avant l’importation sous Python, un travail de nettoyage et d’harmonisation a été réalisé sous Excel afin de garantir la cohérence entre les différentes sources de données.
 
-\begin{itemize}
-    \item Source de données 1 :
-    \begin{itemize} 
-        \item Suppression des colonnes XXX, car XXX
-        \item Suppression des doublons dans les colonnes XXX
-        \item Filtrage en fonction de la colonne XXX, nous n'avons conservé que...
-    \end{itemize}
-\end{itemize}
+\bigskip
+
+-   **Uniformisation des identifiants pays** :\
+    Les pays ont été identifiés à l’aide du **code ISO (id_pays)**, utilisé comme clé commune entre les bases.
+
+    *Fonction excel associée* : {`=RECHERCHEX(nom-pays-source!,nom-pays!code-ISO)`}
+
+    Pour chaque pays dont le nom présentait des différences (accents, majuscules, abréviations ou variations d’écriture), une vérification a été mise en place afin de permettre une correction manuelle au cas par cas.
+
+    *Fonction excel associée* : {\*`=SI(code_ISO="";"A corriger";"OK")`}
+
+-   **Filtrage temporel** : Toutes les bases ont été filtrées pour ne conserver que l’année 2023 ainsi que 2017, afin d’assurer la comparabilité des indicateurs.
+
+\medskip
+
+-   **Source de données 1 (.csv) : Criminalité (2023)**
+
+    Suppression des colonnes inutiles, telles que les colonnes non pertinentes pour l’analyse afin de ne conserver que :
+
+    -   la région du pays : (Colonne B : `region`)
+
+    -   le nom du pays : (Colonne C : `country`)
+
+    -   l’indice de criminalité. (Colonne D : `criminality avg.`)
+
+    -   37 variable non utilisées.
+
+\medskip
+
+-   **Source de données 2 (.R) : PIB (2023, 2017)**
+
+    Suppression des colonnes inutiles, telles que les colonnes non pertinentes pour l’analyse afin de ne conserver que :
+
+    -   le code ISO : (Colonne A : `code`)
+
+    -   le pib par habitant : (Colonne C : `NY.GDP.PCAP.PP.CD`)
+
+    -   1 variables non utilisée (nom pays).
+
+\medskip
+
+-   **Source de données 3 (.R) : Chômage (2023, 2017)**
+
+    Suppression des colonnes inutiles, telles que les colonnes non pertinentes pour l’analyse afin de ne conserver que :
+
+    -   le code ISO : (Colonne A : `code`)
+
+    -   le taux de chômage : (Colonne C : `SL.UEM.TOTL.ZS`)
+
+    -   1 variables non utilisée (nom pays).
+
+\medskip
+
+-   **Source de données 4 (.csv) : IDH (2023)**
+
+    Suppression des colonnes inutiles, telles que les colonnes non pertinentes pour l’analyse afin de ne conserver que :
+
+    -   le nom du pays : (Colonne B : `country`)
+
+    -   l'indicede développement humain : (Colonne C : `Human Development Index`)
+
+    -   7 variables non utilisées.
+
+\medskip
+
+-   **Source de données 5 (.R) : Urbanisation (2023, 2017)**
+
+    Suppression des colonnes inutiles, telles que les colonnes non pertinentes pour l’analyse afin de ne conserver que :
+
+    -   le code ISO : (Colonne A : `code`)
+
+    -   le taux d'urbanisation : (Colonne C : `SP.URB.TOTL.IN.ZS`)
+
+    -   1 variables non utilisée (nom pays).
+
+\medskip
+
+Les différentes bases ont ensuite été fusionnées sous Python 3.14.3 ([code présenté en annexe](#sec-annexe-3.1--code-python-de-traitement-des-données)) à l’aide du code ISO comme clé de jointure.
+
+Une jointure interne (inner join) a été utilisée afin de conserver uniquement les pays présents dans l’ensemble des sources de données. Un contrôle des valeurs manquantes a été effectué, et seules les observations avec au maximum une valeur manquante ont été conservées puis ensuite remplacés par une valeur moyenne\footnote{Certaines valeurs manquantes pour les pays suivants ont été complétées manuellement à partir de sources externes (Wikipédia : \url{https://fr.wikipedia.org/wiki/Liste_des_pays_par_IDH}).} La base finale obtenue est ainsi harmonisée et exploitable pour l’analyse.
 
 ## Requêtes réalisées
 
-Pour chaque requête, l'exprimer en langage naturel puis en SQL. Puis donner le résultat obtenu (ou un extrait) et expliquer ce résultat.
+\bigskip
 
-L'objectif est de varier le type de requêtes et de répondre à votre problématique initiale.
+**Combien de pays sont étudiés ?**
+
+
+``` sql
+SELECT COUNT(*)
+FROM PAYS;
+```
+
+
+
+
+Table: 1 records
+
+| COUNT(*)|
+|--------:|
+|      155|
+
+Cette requête permet de connaître le nombre total de pays présents dans l’étude. Elle sert à présenter la taille du jeu de données.
+
+\medskip
+\medskip
+
+**Quel est le niveau moyen de criminalité organisée dans la base ?**
+
+
+``` sql
+SELECT AVG(criminalite)
+FROM CRIMINALITE;
+```
+
+
+
+
+Table: 1 records
+
+| AVG(criminalite)|
+|----------------:|
+|            5.255|
+
+Cette requête donne la moyenne générale de l’indice de criminalité organisée. Elle permet d’avoir une première vision globale du phénomène.
+
+\newpage
+
+**Quels sont les 10 pays ayant les niveaux de criminalité organisée les plus élevés ?**
+
+
+``` sql
+SELECT p.nom_pays, c.annee, c.criminalite
+FROM CRIMINALITE c, PAYS p
+WHERE c.id_pays = p.id_pays
+ORDER BY c.criminalite DESC
+LIMIT 10;
+```
+
+
+
+
+Table: Displaying records 1 - 10
+
+|nom_pays | annee| criminalite|
+|:--------|-----:|-----------:|
+|Myanmar  |  2023|        8.15|
+|RD Congo |  2017|        7.75|
+|Colombie |  2023|        7.75|
+|Colombie |  2017|        7.66|
+|Myanmar  |  2017|        7.59|
+|Mexique  |  2023|        7.57|
+|Mexique  |  2017|        7.56|
+|Paraguay |  2023|        7.52|
+|RD Congo |  2023|        7.35|
+|Nigeria  |  2023|        7.28|
+
+Cette requête identifie le Top 10 des pays les plus criminels entre l’année 2017 et 2023. Elle permet d'avoir une vue d'ensemble rapide des pays où la criminalité est la plus élevée
+
+\medskip
+
+**Quel est la moyenne de criminalité organisée par région du monde ?**
+
+
+``` sql
+SELECT p.region, AVG(c.criminalite) AS moyenne_criminalite
+FROM CRIMINALITE c, PAYS p
+WHERE c.id_pays = p.id_pays
+GROUP BY p.region
+ORDER BY moyenne_criminalite DESC;
+```
+
+
+
+
+Table: Displaying records 1 - 10
+
+|region                        | moyenne_criminalite|
+|:-----------------------------|-------------------:|
+|Asie du Sud-Est               |            6.127222|
+|Asie de l'Ouest               |            5.971667|
+|Afrique de l'Est              |            5.919286|
+|Caraïbes et Amérique centrale |            5.734091|
+|Amérique du Nord              |            5.640000|
+|Amérique du Sud               |            5.637727|
+|Asie du Sud                   |            5.553572|
+|Afrique de l'Ouest            |            5.457333|
+|Afrique centrale              |            5.420500|
+|Europe du Sud                 |            5.140833|
+
+Cette requête calcule la moyenne des indices de criminalité organisée pour chaque région.
+
+Elle permet d’identifier les régions du monde où la criminalité organisée est globalement la plus importante.
+
+**Quelles sont les régions ayant plus de 3 pays avec une criminalité élevée ?**
+
+\medskip
+\medskip
+
+
+``` sql
+SELECT p.region, AVG(c.criminalite) AS moyenne_criminalite
+FROM CRIMINALITE c, PAYS p
+WHERE c.id_pays = p.id_pays
+GROUP BY p.region
+ORDER BY moyenne_criminalite DESC;
+```
+
+
+
+
+Table: Displaying records 1 - 10
+
+|region                        | moyenne_criminalite|
+|:-----------------------------|-------------------:|
+|Asie du Sud-Est               |            6.127222|
+|Asie de l'Ouest               |            5.971667|
+|Afrique de l'Est              |            5.919286|
+|Caraïbes et Amérique centrale |            5.734091|
+|Amérique du Nord              |            5.640000|
+|Amérique du Sud               |            5.637727|
+|Asie du Sud                   |            5.553572|
+|Afrique de l'Ouest            |            5.457333|
+|Afrique centrale              |            5.420500|
+|Europe du Sud                 |            5.140833|
+
+Cette requête utilise une sous-requête pour sélectionner les pays à forte criminalité avec un indice supérieur a 6, puis regroupe ces pays par région.
+
+**Quelles régions comptent plus de 2 pays avec un IDH faible ?**
+
+\medskip
+\medskip
+
+
+``` sql
+SELECT region
+FROM PAYS
+WHERE id_pays IN (
+    SELECT i.id_pays
+    FROM INDICATEURS i
+    WHERE i.IDH < 0.5
+)
+GROUP BY region
+HAVING COUNT(*) > 2;
+```
+
+
+
+
+Table: 4 records
+
+|region             |
+|:------------------|
+|Afrique australe   |
+|Afrique centrale   |
+|Afrique de l'Est   |
+|Afrique de l'Ouest |
+
+Cette requête met en évidence les régions concentrant plusieurs pays peu développés avec un IDH \< 0.5.
+
+**Quels sont les pays dont le PIB est faible et dont la criminalité est élevée ?**
+
+
+``` sql
+SELECT p.nom_pays,c.criminalite,i.PIB
+FROM CRIMINALITE c,INDICATEURS i,PAYS p
+WHERE c.id_pays = i.id_pays
+AND c.annee = i.annee
+AND c.id_pays = p.id_pays
+AND i.PIB < 5000
+AND c.criminalite>5
+```
+
+
+
+
+Table: Displaying records 1 - 10
+
+|nom_pays                  | criminalite|      PIB|
+|:-------------------------|-----------:|--------:|
+|Afghanistan               |        7.08| 2335.800|
+|Afghanistan               |        7.10| 2201.720|
+|Bénin                     |        5.25| 2885.890|
+|Bénin                     |        5.32| 4129.970|
+|Burkina Faso              |        5.49| 2042.400|
+|Burkina Faso              |        5.92| 2759.300|
+|République centrafricaine |        7.04|  883.811|
+|République centrafricaine |        6.75| 1257.090|
+|Côte d'Ivoire             |        6.15| 4690.180|
+|Cameroun                  |        6.31| 3767.430|
+
+Cette requête permet d’identifier les pays qui cumulent faibles ressources économiques et criminalité élevée. Elle met en évidence des situations de vulnérabilité.
+
+**Quels pays apparaissent plusieurs fois avec forte criminalité et chômage élevé ?**
+
+
+``` sql
+SELECT p.nom_pays, COUNT(*) AS nb_cas 
+FROM CRIMINALITE c, INDICATEURS i, PAYS p 
+WHERE c.id_pays = i.id_pays AND c.annee = i.annee 
+AND c.id_pays = p.id_pays AND c.criminalite >= 6 
+AND i.taux_chomage > 10 GROUP BY p.nom_pays HAVING COUNT(*) >= 2;
+```
+
+
+
+
+Table: 8 records
+
+|nom_pays       | nb_cas|
+|:--------------|------:|
+|Afghanistan    |      2|
+|Afrique du Sud |      2|
+|Irak           |      2|
+|Liban          |      2|
+|Libye          |      2|
+|Népal          |      2|
+|Soudan         |      2|
+|Syrie          |      2|
+
+Cette requête identifie les pays qui cumulent plusieurs années de forte criminalité et de chômage élevé, ce qui met en évidence des situations critiques durables.###A MODIFIER ON NE MET PAS EN EVIDENCE ON EMET UNE HYPOTHESE
+
+**Quels sont les pays dont la criminalité organisée est supérieure à la moyenne de leur région ?**
+
+
+``` sql
+SELECT p.nom_pays, p.region, c.criminalite 
+FROM criminalite c, pays p 
+WHERE c.id_pays = p.id_pays 
+AND c.criminalite > ( SELECT AVG(c2.criminalite) 
+FROM CRIMINALITE c2, PAYS p2 WHERE c2.id_pays = p2.id_pays 
+AND p2.region = p.region );
+```
+
+
+
+
+Table: Displaying records 1 - 10
+
+|nom_pays            |region                        | criminalite|
+|:-------------------|:-----------------------------|-----------:|
+|Afghanistan         |Asie du Sud                   |        7.08|
+|Afghanistan         |Asie du Sud                   |        7.10|
+|Angola              |Afrique centrale              |        5.58|
+|Albanie             |Europe centrale et orientale  |        5.63|
+|Albanie             |Europe centrale et orientale  |        5.17|
+|Émirats arabes unis |Asie de l'Ouest               |        6.37|
+|Australie           |Australie et Nouvelle-Zélande |        4.00|
+|Australie           |Australie et Nouvelle-Zélande |        4.00|
+|Azerbaïdjan         |Asie centrale et Caucase      |        5.08|
+|Azerbaïdjan         |Asie centrale et Caucase      |        4.80|
+
+Cette requête compare chaque pays à la moyenne de sa région. Elle permet d’identifier les pays dont la criminalité est anormalement élevée dans leur contexte régional.
 
 ## Quelques détails techniques
 
-On peut interagir avec une base de données directement depuis RMarkdown : i.e. requêter puis récupérer et afficher le résultat directement depuis le .Rmd. Un fichier connexionBDD.Rmd est fourni pour donner des exemples.
+Dans ce projet, nous avons utilisé RMarkdown pour interagir directement avec la base de données.
+
+Un chunk de connexion SQL fourni dans le fichier connexionBDD.Rmd a été utilisé afin d’établir la connexion à la base. Cela nous a permis d’exécuter les requêtes SQL directement depuis R et d’afficher les résultats dans le rapport.
+
+Avant cela, les requêtes ont été testées dans phpMyAdmin afin de vérifier leur bon fonctionnement et la cohérence des résultats.
+
+Une fois validées, les requêtes ont été intégrées dans le document RMarkdown.
+
+Cette méthode nous a également permis de nous entraîner à manipuler les données directement dans R, en vue de réaliser ensuite les analyses et les visualisations.
 
 # Matériel et Méthodes
 
@@ -280,11 +627,11 @@ boxplot(cars, col = c("#5975a4", "#cc8963"))
 
 \begin{figure}
 
-{\centering \includegraphics[width=7cm]{scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-1-1} 
+{\centering \includegraphics[width=7cm]{scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-10-1} 
 
 }
 
-\caption{\label{fig:boxplots}Deux boxplots.}\label{fig:unnamed-chunk-1}
+\caption{\label{fig:boxplots}Deux boxplots.}\label{fig:unnamed-chunk-10}
 \end{figure}
 
 ``` r
@@ -305,11 +652,11 @@ boxplot(cars, main = "Un titre qui est vraiment beaucoup trop long et qui dépas
 
 \begin{figure}
 
-{\centering \includegraphics[width=7cm]{scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-2-1} 
+{\centering \includegraphics[width=7cm]{scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-11-1} 
 
 }
 
-\caption{Pas super.}\label{fig:unnamed-chunk-2}
+\caption{Pas super.}\label{fig:unnamed-chunk-11}
 \end{figure}
 
 par celui-ci:
@@ -324,11 +671,11 @@ boxplot(cars,
 
 \begin{figure}
 
-{\centering \includegraphics[width=7cm]{scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-3-1} 
+{\centering \includegraphics[width=7cm]{scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-12-1} 
 
 }
 
-\caption{Déjà mieux.}\label{fig:unnamed-chunk-3}
+\caption{Déjà mieux.}\label{fig:unnamed-chunk-12}
 \end{figure}
 
 \normalsize
@@ -395,7 +742,66 @@ Il faut utiliser les annexes de façon judicieuse. C'est ici que l'on place des 
 
 ## **Codes** {.unnumbered}
 
-Ajouter vos codes informatique ici. Les codes doivent être correctement indentés et commentés.
+#### **Annexe 3.1** : Code Python de traitement des données {#sec-annexe-3.1--code-python-de-traitement-des-données}
+
+Le code ci-dessous permet d’importer les différentes bases de données, de les fusionner à l’aide du code ISO, puis de filtrer les observations en fonction des valeurs manquantes.
+
+
+``` python
+"""
+Auteur : Groupe DataInvestigation
+Création : 01/04/2026
+Contenu : Code de tri et fusion ayant pour résultat une table excel
+"""
+import pandas as pd
+from functools import reduce
+
+
+crime = pd.read_excel("criminalite.xlsx")
+chomage = pd.read_csv("chomage.csv")
+idh = pd.read_excel("idh.xlsx")
+urbanisation = pd.read_csv("urbanisation.csv")
+pib = pd.read_csv("pib.csv")
+
+#Suppression des doublons code ISO
+
+crime = crime.drop_duplicates(subset="code_ISO")
+chomage = chomage.drop_duplicates(subset="code_ISO")
+idh = idh.drop_duplicates(subset="code_ISO")
+urbanisation = urbanisation.drop_duplicates(subset="code_ISO")
+
+#Fusion permettant de garder les pays présents partout
+
+liste_tables = [crime, chomage, idh, urbanisation]
+
+table_finale = reduce(
+    lambda gauche, droite: pd.merge(gauche, droite, on="code_ISO", how="inner"),
+    liste_tables
+)
+
+#Comptage de valeurs manquantes 
+
+colonnes_indicateurs = [
+    "indice_criminalite",
+    "taux_chomage",
+    "IDH",
+    "taux_urbanisation"
+]
+
+table_finale["nb_valeurs_manquantes"] = table_finale[colonnes_indicateurs].isna().sum(axis=1)
+
+#Garder les pays avec 0 ou 1 valeurs manquantes max
+
+table_finale = table_finale[table_finale["nb_valeurs_manquantes"] <= 1]
+
+#Tri par pays
+
+table_finale = table_finale.sort_values("nom_pays")
+
+#Export
+
+table_finale.to_excel("BD_INDICATEURS.xlsx", index=False)
+```
 
 ## **Tables** {.unnumbered}
 

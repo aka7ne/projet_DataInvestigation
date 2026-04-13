@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.28)  28 MAR 2026 19:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.4)  9 APR 2026 14:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **scdon2-UPV-report-template.tex
 (./scdon2-UPV-report-template.tex
 LaTeX2e <2025-11-01>
-L3 programming layer <2026-01-19>
+L3 programming layer <2026-03-20>
 (./unswthesis.cls
 Document Class: unswthesis 1999/11/10  v2.42  UNSW thesis class
 (c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/report.cls
@@ -24,7 +24,7 @@ File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \c@table=\count283
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
-\bibindent=\dimen148
+\bibindent=\dimen150
 )
 \chaprule=\skip51
 \ATchapskip=\skip52
@@ -42,14 +42,14 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@cnth=\count284
 \Gm@cntv=\count285
 \c@Gm@tempcnt=\count286
-\Gm@bindingoffset=\dimen149
-\Gm@wd@mp=\dimen150
-\Gm@odd@mp=\dimen151
-\Gm@even@mp=\dimen152
-\Gm@layoutwidth=\dimen153
-\Gm@layoutheight=\dimen154
-\Gm@layouthoffset=\dimen155
-\Gm@layoutvoffset=\dimen156
+\Gm@bindingoffset=\dimen151
+\Gm@wd@mp=\dimen152
+\Gm@odd@mp=\dimen153
+\Gm@even@mp=\dimen154
+\Gm@layoutwidth=\dimen155
+\Gm@layoutheight=\dimen156
+\Gm@layouthoffset=\dimen157
+\Gm@layoutvoffset=\dimen158
 \Gm@dimlist=\toks18
 ) (c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2025/01/14 v1.3e Standard LaTeX Color (DPC)
@@ -70,10 +70,10 @@ Package: fancyvrb 2025/07/28 4.6 verbatim text (tvz,hv)
 ) (c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip54
-\fb@frw=\dimen157
-\fb@frh=\dimen158
-\FrameRule=\dimen159
-\FrameSep=\dimen160
+\fb@frw=\dimen159
+\fb@frh=\dimen160
+\FrameRule=\dimen161
+\FrameSep=\dimen162
 ) (./header.tex (c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks19
@@ -109,10 +109,10 @@ Package: amstext 2024/11/17 v2.01 AMS text
 (c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks26
-\ex@=\dimen161
+\ex@=\dimen163
 )) (c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen162
+\pmbraise@=\dimen164
 ) (c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
@@ -133,7 +133,7 @@ LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen163
+\big@size=\dimen165
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
 \macc@depth=\count295
@@ -151,12 +151,12 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \column@=\count300
 \maxfields@=\count301
 \andhelp@=\toks28
-\eqnshift@=\dimen164
-\alignsep@=\dimen165
-\tagshift@=\dimen166
-\tagwidth@=\dimen167
-\totwidth@=\dimen168
-\lineht@=\dimen169
+\eqnshift@=\dimen166
+\alignsep@=\dimen167
+\tagshift@=\dimen168
+\tagwidth@=\dimen169
+\totwidth@=\dimen170
+\lineht@=\dimen171
 \@envbody=\toks29
 \multlinegap=\skip59
 \multlinetaggap=\skip60
@@ -174,8 +174,8 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
 )
-\Gin@req@height=\dimen170
-\Gin@req@width=\dimen171
+\Gin@req@height=\dimen172
+\Gin@req@width=\dimen173
 ) (c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/afterpage.sty
 Package: afterpage 2023/07/04 v1.08 After-Page Package (DPC)
 \AP@output=\toks31
@@ -217,7 +217,7 @@ Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 ) (c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen172
+\@linkdim=\dimen174
 \Hy@linkcounter=\count304
 \Hy@pagecounter=\count305
 (c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
@@ -247,15 +247,15 @@ Package hyperref Info: Bookmarks ON on input line 4468.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4807.
-\XeTeXLinkMargin=\dimen173
+\XeTeXLinkMargin=\dimen175
 (c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 (c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count308
-\Field@Width=\dimen174
-\Fld@charsize=\dimen175
+\Field@Width=\dimen176
+\Fld@charsize=\dimen177
 Package hyperref Info: Hyper figures OFF on input line 6084.
 Package hyperref Info: Link nesting OFF on input line 6089.
 Package hyperref Info: Hyper index ON on input line 6092.
@@ -291,7 +291,7 @@ Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \LTpre=\skip64
 \LTpost=\skip65
 \LTchunksize=\count314
-\LTcapwidth=\dimen176
+\LTcapwidth=\dimen178
 \LT@head=\box58
 \LT@firsthead=\box59
 \LT@foot=\box60
@@ -304,23 +304,23 @@ Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \LT@p@ftn=\toks32
 ) (c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen177
-\lightrulewidth=\dimen178
-\cmidrulewidth=\dimen179
-\belowrulesep=\dimen180
-\belowbottomsep=\dimen181
-\aboverulesep=\dimen182
-\abovetopsep=\dimen183
-\cmidrulesep=\dimen184
-\cmidrulekern=\dimen185
-\defaultaddspace=\dimen186
+\heavyrulewidth=\dimen179
+\lightrulewidth=\dimen180
+\cmidrulewidth=\dimen181
+\belowrulesep=\dimen182
+\belowbottomsep=\dimen183
+\aboverulesep=\dimen184
+\abovetopsep=\dimen185
+\cmidrulesep=\dimen186
+\cmidrulekern=\dimen187
+\defaultaddspace=\dimen188
 \@cmidla=\count319
 \@cmidlb=\count320
-\@aboverulesep=\dimen187
-\@belowrulesep=\dimen188
+\@aboverulesep=\dimen189
+\@belowrulesep=\dimen190
 \@thisruleclass=\count321
 \@lastruleclass=\count322
-\@thisrulewidth=\dimen189
+\@thisrulewidth=\dimen191
 ) (c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count323
@@ -356,7 +356,7 @@ LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line
 LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2084.
 LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2086.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2111.
-\U@D=\dimen190
+\U@D=\dimen192
 \l@unhyphenated=\language4
 (c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read3
@@ -375,25 +375,25 @@ Package babel Info: Making ! an active character on input line 275.
 Package babel Info: Making ? an active character on input line 276.
 \FBguill@level=\count327
 \FBold@everypar=\toks35
-\FB@Mht=\dimen191
+\FB@Mht=\dimen193
 \mc@charclass=\count328
 \mc@charfam=\count329
 \mc@charslot=\count330
 \std@mcc=\count331
 \dec@mcc=\count332
-\FB@pardim=\dimen192
-\listindentFB=\dimen193
-\descindentFB=\dimen194
-\labelindentFB=\dimen195
-\labelwidthFB=\dimen196
-\leftmarginFB=\dimen197
-\parindentFFN=\dimen198
-\FBfnindent=\dimen199
+\FB@pardim=\dimen194
+\listindentFB=\dimen195
+\descindentFB=\dimen196
+\labelindentFB=\dimen197
+\labelwidthFB=\dimen198
+\leftmarginFB=\dimen199
+\parindentFFN=\dimen256
+\FBfnindent=\dimen257
 ))) (c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/carlisle/scalefnt.sty) (c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
-\col@sep=\dimen256
+\col@sep=\dimen258
 \ar@mcellbox=\box65
-\extrarowheight=\dimen257
+\extrarowheight=\dimen259
 \NC@list=\toks36
 \extratabsurround=\skip80
 \backup@length=\skip81
@@ -402,8 +402,8 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
 \calc@Acount=\count333
 \calc@Bcount=\count334
-\calc@Adimen=\dimen258
-\calc@Bdimen=\dimen259
+\calc@Adimen=\dimen260
+\calc@Bdimen=\dimen261
 \calc@Askip=\skip82
 \calc@Bskip=\skip83
 LaTeX Info: Redefining \setlength on input line 86.
@@ -415,7 +415,7 @@ LaTeX Info: Redefining \addtolength on input line 87.
 \cslhangindent=\skip85
 \csllabelwidth=\skip86
 ) (c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count337
 ) (./scdon2-UPV-report-template.aux
 Package babel Info: 'french' activates 'french' shorthands.
@@ -498,11 +498,11 @@ Package french3.ldf Warning: Figures' and tables' captions might look like
 (french3.ldf)                try to add \usepackage{caption} or
 (french3.ldf)                ... leave it as it is; reported on input line 83.
 
-<logo-upvm_4.jpg, id=96, 180.675pt x 90.3375pt>
+<logo-upvm_4.jpg, id=96, 827.60806pt x 584.37677pt>
 File: logo-upvm_4.jpg Graphic file (type jpg)
 <use logo-upvm_4.jpg>
 Package pdftex.def Info: logo-upvm_4.jpg  used on input line 85.
-(pdftex.def)             Requested size: 142.26378pt x 71.13287pt.
+(pdftex.def)             Requested size: 142.26378pt x 100.44843pt.
 [1
 
 {c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./logo-upvm_4.jpg>]
@@ -593,100 +593,107 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) h
                                                   \__shipout_drop_firstpage_...
 l.462 \section
               {Import des données}\label{import-des-donnuxe9es} <./res/images/mcd.png> <./res/images/mod.png>]
-Overfull \hbox (41.42442pt too wide) in paragraph at lines 492--496
-\T1/cmr/m/n/12 ter puis r�-cu-p�-rer et af-fi-cher le r�-sul-tat di-rec-te-ment de-puis le .Rmd. Un fi-chier connexionBDD.Rmd
+Overfull \hbox (23.94547pt too wide) in paragraph at lines 476--478
+[]\T1/cmr/m/it/12 Fonction ex-cel as-so-ci�e \T1/cmr/m/n/12 : {\T1/cmtt/m/n/12 =RECHERCHEX(nom-pays-source!,nom-pays!code-ISO)\T1/cmr/m/n/12 } 
  []
 
 [6]
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 613.
+[7] [8]
+ignored: Infinite glue shrinkage found in box being split [9]
+ignored: Infinite glue shrinkage found in box being split [10] [11]
 Chapitre 4.
-[7
+[12
 
 ]
 Chapitre 5.
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 569.
-<scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-1-1.pdf, id=208, 469.755pt x 325.215pt>
-File: scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (type pdf)
-<use scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-1-1.pdf>
-Package pdftex.def Info: scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-1-1.pdf  used on input line 575.
+<scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-10-1.pdf, id=244, 469.755pt x 325.215pt>
+File: scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-10-1.pdf Graphic file (type pdf)
+<use scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-10-1.pdf>
+Package pdftex.def Info: scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-10-1.pdf  used on input line 1063.
 (pdftex.def)             Requested size: 199.16928pt x 137.88454pt.
-[8
+[13
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.596 \begin{Shaded}
-                     <./scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-1-1.pdf>]
-<scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-2-1.pdf, id=220, 469.755pt x 325.215pt>
-File: scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-2-1.pdf Graphic file (type pdf)
-<use scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-2-1.pdf>
-Package pdftex.def Info: scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-2-1.pdf  used on input line 604.
+l.1084 \begin{Shaded}
+                      <./scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-10-1.pdf>]
+<scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-11-1.pdf, id=255, 469.755pt x 325.215pt>
+File: scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-11-1.pdf Graphic file (type pdf)
+<use scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-11-1.pdf>
+Package pdftex.def Info: scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-11-1.pdf  used on input line 1092.
 (pdftex.def)             Requested size: 199.16928pt x 137.88454pt.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <6> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 617.
-<scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-3-1.pdf, id=221, 469.755pt x 325.215pt>
-File: scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type pdf)
-<use scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-3-1.pdf>
-Package pdftex.def Info: scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-3-1.pdf  used on input line 624.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 1105.
+<scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-12-1.pdf, id=256, 469.755pt x 325.215pt>
+File: scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-12-1.pdf Graphic file (type pdf)
+<use scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-12-1.pdf>
+Package pdftex.def Info: scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-12-1.pdf  used on input line 1112.
 (pdftex.def)             Requested size: 199.16928pt x 137.88454pt.
-[9
+[14
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.656 \chapter
-              {Mise à l'épreuve ---
+l.1144 \chapter
+               {Mise à l'épreuve ---
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.656 \chapter
-              {Mise à l'épreuve --- <./scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-2-1.pdf> <./scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-3-1.pdf>]
+l.1144 \chapter
+               {Mise à l'épreuve --- <./scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-11-1.pdf> <./scdon2-UPV-report-template_files/figure-latex/unnamed-chunk-12-1.pdf>]
 Chapitre 6.
-[10
+[15
 
 ]
 Chapitre 7.
-[11
+[16
 
 ]
 Chapitre 8.
-[12
+[17
 
 ]
 No file scdon2-UPV-report-template.bbl.
-[13
+[18
 
-] [14
+] [19
 
+]
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[20] [21
 pdfTeX warning (ext4): destination with the same identifier (name{table.8.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.808   \item L
-               es nombres sont bien alignés à droite dans la 3\ieme{} colonne] [15] (./scdon2-UPV-report-template.aux)
+l.1368 \end{document}
+                     ] (./scdon2-UPV-report-template.aux)
  ***********
 LaTeX2e <2025-11-01>
-L3 programming layer <2026-01-19>
+L3 programming layer <2026-03-20>
  ***********
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `scdon2-UPV-report-template.out' has not changed.
-(rerunfilecheck)             Checksum: 8600B02C8D2FAB47101B8EDF71EDD2F1;4139.
+(rerunfilecheck)             Checksum: 4A4F774DD7D0F404C80E6DBA0441D5CD;4140.
  ) 
 Here is how much of TeX's memory you used:
- 13546 strings out of 469495
- 217145 string characters out of 5467255
- 642115 words of memory out of 5000000
- 41940 multiletter control sequences out of 15000+600000
- 643582 words of font info for 78 fonts, out of 8000000 for 9000
+ 13591 strings out of 469319
+ 217605 string characters out of 5463909
+ 645945 words of memory out of 5000000
+ 42138 multiletter control sequences out of 15000+600000
+ 646613 words of font info for 91 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 80i,8n,82p,563b,546s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0800.450pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1728.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk><c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on scdon2-UPV-report-template.pdf (20 pages, 1917753 bytes).
+ 80i,8n,82p,563b,592s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecit1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbi1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0800.450pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1728.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1095.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> <c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk><c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Users/kawyb/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on scdon2-UPV-report-template.pdf (26 pages, 2063637 bytes).
 PDF statistics:
- 804 PDF objects out of 1000 (max. 8388607)
- 318 compressed objects within 4 object streams
- 62 named destinations out of 1000 (max. 500000)
+ 984 PDF objects out of 1000 (max. 8388607)
+ 364 compressed objects within 4 object streams
+ 79 named destinations out of 1000 (max. 500000)
  220 words of extra memory for PDF output out of 10000 (max. 10000000)
 
