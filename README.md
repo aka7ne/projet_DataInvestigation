@@ -1,6 +1,5 @@
 ### Analyse des déterminants socio-économiques de la criminalité organisée à l'échelle internationale
 
-![Status](https://img.shields.io/badge/Statut-En%20cours-blue)
 ![MySQL](https://img.shields.io/badge/Database-MySQL-4479A1?logo=mysql&logoColor=white)
 ![R](https://img.shields.io/badge/Analysis-R-276DC3?logo=r&logoColor=white)
 ![Data Science](https://img.shields.io/badge/Domain-Data%20Science-purple)
